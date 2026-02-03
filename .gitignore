@@ -15,10 +15,10 @@
 
 # next.js
 /.next/
-/out/
 
 # production
 /build
+# /out/ - commented out to allow committing build output for static hosting
 
 # misc
 .DS_Store
