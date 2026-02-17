@@ -14,7 +14,7 @@ export default function Footer() {
           transition={{ duration: 0.6 }}
           className="flex flex-col md:flex-row items-center justify-between gap-4"
         >
-          <p className="text-black/60 text-sm">
+          <p className="text-black text-sm">
             All rights reserved ©2026
           </p>
 
