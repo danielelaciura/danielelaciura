@@ -55,10 +55,9 @@ export default function What() {
                 
                 className="p-6 rounded-2xl bg-white border border-white/10 backdrop-blur-sm"
               >
-                <span className="text-3xl mb-4 text-white bg-gradient-to-br to-[#ff4a00] from-[#2962b2] rounded-xl w-auto px-2">{service.icon}
-
-
-                </span>
+                <div className="text-2xl mb-2 w-8 h-8 text-white bg-[#2e63b2] rounded-xl flex items-center justify-center">
+                  {service.icon}
+                </div>
                 <h3 className="text-xl text-black my-2">{service.title}</h3>
                 <p className="text-black/60 text-sm">{service.description}</p>
                 {

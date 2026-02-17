@@ -79,7 +79,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-lg mb-8 max-w-2xl z-10"
           >
-            Hey, I&apos;m Daniele, and welcome! I love building beautiful, timeless digital experiences.
+            Hello, I’m Daniele. I design and build elegant, timeless digital experiences. Welcome.
           </motion.p>
 
           {/* Get In Touch Button */}
