@@ -2,64 +2,102 @@
 
 import { motion } from "framer-motion";
 
-const aboutCards = [
-  {
-    title: "Our Mission",
-    description: "Committed to creating templates that enhance user interaction and increase",
-  },
-  {
-    title: "Our Vision",
-    description: "Empower everyone to build effective websites affordably",
-  },
-  {
-    title: "Our Focus",
-    description: "is centered to meet the specific needs of our clients, driving success",
-  },
-];
 
 export default function AboutUs() {
   return (
-    <section className="py-24 px-6">
-      <div className="container mx-auto max-w-6xl">
-        <div className="flex justify-end mb-6">
-          <span className="px-4 py-2 rounded-full bg-black/50 border border-white/10 text-white/80 text-sm">
-            About Us
-          </span>
-        </div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+    <section id="about-me" className="container mx-auto max-w-5xl">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-12"
+      >
+        <h2 className="md:text-5xl font-bold text-black">
+          About Me
+        </h2>
+      </motion.div>
+
+      <motion.div 
+          initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            We are a passionate and dedicated team of design professionals
-          </h2>
-          <p className="text-xl text-white/70">
-            Experience Our Service Through the Eyes of Our Clients
-          </p>
-        </motion.div>
+          transition={{ duration: 1.6 }}
+        className="rounded-2xl backdrop-blur-sm"
+      >
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {aboutCards.map((card, index) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="p-6 rounded-2xl bg-black/50 border border-white/10 backdrop-blur-sm"
-            >
-              <div className="text-3xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold text-white mb-3">{card.title}</h3>
-              <p className="text-white/70 leading-relaxed">{card.description}</p>
-            </motion.div>
-          ))}
+        <div className="bg-white relative p-10 rounded-2xl">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
+
+            <div className="text-left">
+              <h3 className="mb-2">Here is a bit about me</h3>
+
+              <p className="text-md mb-4 leading-[1.8]">
+                I’m a qualified Product Leader with more than 15 years of experience in the tech field and travel industry.{" "}
+                <br />
+                I kicked off my career working as a developer for almost 10 years, gaining a solid technical fluency and a clear understanding of the product development life cycle.
+              </p>
+              <p className="text-md mb-4 leading-[1.8]">
+                Beyond my technological background, I have developed significant expertise in the travel industry, collaborating with international suppliers and clients and leading a team of over 40 people.
+              </p>
+              <p className="text-md mb-4 leading-[1.8]">
+                I’m able to bring a blend of technical expertise, user-focused design, and strategic product management. I enjoy collaborating with teams to achieve shared goals with curiosity and adaptability.
+              </p>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mt-4 px-8 py-4 rounded-xl border text-black font-semibold text-lg hover:shadow-lg hover:shadow-orange-500/50 transition-all"
+              >
+                See full CV
+              </motion.button>
+            </div>
+
+            <div className="text-left">
+              <div className="grid gap-5">
+                <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
+                  <h3 className="md:text-4xl font-semibold tracking-tight text-black">
+                    <span className="bg-indigo-500 bg-gradient-to-r to-[#ff4a00] from-[#2962b2] bg-clip-text text-transparent">
+                      +7  
+                    </span>{" "}
+                    years of experience
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-black/70">
+                    In travel tech and high technology industries, across product, engineering, and delivery.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
+                  <h3 className="text-xl md:text-4xl font-semibold tracking-tight text-black">
+                    <span className="bg-indigo-500 bg-gradient-to-r to-[#ff4a00] from-[#2962b2] bg-clip-text text-transparent">
+                    +40 </span>{" "}
+                     people led
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-black/70">
+                    Built and guided cross-functional teams with a strong focus on outcomes and execution.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
+                  <h3 className="text-xl md:text-4xl font-semibold tracking-tight text-black">
+                    <span className="bg-indigo-500 bg-gradient-to-r to-[#ff4a00] from-[#2962b2] bg-clip-text text-transparent">
+                    +15
+                    </span>{" "}
+                    years coding background
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-black/70">
+                    Deep technical fluency to collaborate with engineers and make better product decisions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
+
+
+      </motion.div>
+
     </section>
   );
 }

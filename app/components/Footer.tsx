@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="py-8 px-6 border-t border-white/10">
+    <footer className="py-8 px-6 border-t border-black/90">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0 }}
@@ -14,17 +14,9 @@ export default function Footer() {
           transition={{ duration: 0.6 }}
           className="flex flex-col md:flex-row items-center justify-between gap-4"
         >
-          <p className="text-white/60 text-sm">
-            All rights reserved ©2025
+          <p className="text-black/60 text-sm">
+            All rights reserved ©2026
           </p>
-          <div className="flex gap-6">
-            <Link href="#" className="text-white/60 hover:text-white text-sm transition-colors">
-              Changelog
-            </Link>
-            <Link href="#" className="text-white/60 hover:text-white text-sm transition-colors">
-              License
-            </Link>
-          </div>
         </motion.div>
       </div>
     </footer>

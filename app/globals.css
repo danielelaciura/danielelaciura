@@ -1,27 +1,85 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
-  --foreground: #ffffff;
-}
+  /* Core palette */
+  --background: #f7f7f7;
+  --foreground: #181515;
+  --muted: rgba(24, 21, 21, 0.7);
+  --border: rgba(24, 21, 21, 0.12);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Surface + shadow */
+  --surface: rgba(255, 255, 255, 0.65);
+  --shadow: 0 20px 45px rgba(24, 21, 21, 0.12);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
+  /* background-image: url("./assets/bg.png"); */
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  line-height: 1.55;
   overflow-x: hidden;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Prevent anchored sections from hiding behind fixed header */
+section[id] {
+  scroll-margin-top: 180px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-encode-sans-condensed), system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2.25rem);
+}
+
+h3 {
+  font-size: clamp(1.125rem, 1.6vw, 1.5rem);
+}
+
+.daniele-bg {
+  background-image: url("./assets/daniele_bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.navigation-menu {
+  font-family: var(--font-encode-sans-condensed), system-ui, -apple-system, sans-serif;
+}
+
+/* Slightly nicer nav links */
+.navigation-menu a {
+  color: rgba(24, 21, 21, 0.78);
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.navigation-menu a:hover {
+  color: rgba(24, 21, 21, 1);
+}
+
+/* Glass surface helper (matches header card style) */
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
 }
 
 /* Custom scrollbar for webkit browsers */
@@ -30,14 +88,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(24, 21, 21, 0.18);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(24, 21, 21, 0.28);
 }

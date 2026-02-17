@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import WhatMakesDifferent from "./components/WhatMakesDifferent";
-import Portfolio from "./components/Portfolio";
+import What from "./components/What";
 import Testimonials from "./components/Testimonials";
 import AboutUs from "./components/AboutUs";
 import CallToAction from "./components/CallToAction";
@@ -10,15 +10,14 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen ">
       <Header />
+      <div id="home" className="scroll-mt-0" aria-hidden="true" />
       <Hero />
-      <WhatMakesDifferent />
-      <Portfolio />
-      <Testimonials />
+      <What />
       <AboutUs />
+      <WhatMakesDifferent />
       <CallToAction />
-      <FAQ />
       <Footer />
     </main>
   );
