@@ -24,7 +24,7 @@ const itemVariants = {
 
 export default function Hero() {
   return (
-    <section className=" flex items-center justify-center pt-44 px-1">
+    <section className="min-h-screen flex items-center justify-center px-1">
       <motion.div
         variants={containerVariants}
         initial="hidden"

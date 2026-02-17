@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import { FaLinkedin } from "react-icons/fa"; // make sure react-icons is installed
 
 export default function AboutUs() {
   return (
@@ -44,13 +44,37 @@ export default function AboutUs() {
                 I’m able to bring a blend of technical expertise, user-focused design, and strategic product management. I enjoy collaborating with teams to achieve shared goals with curiosity and adaptability.
               </p>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="mt-4 px-8 py-4 rounded-xl border text-black font-semibold text-lg hover:shadow-lg hover:shadow-orange-500/50 transition-all"
-              >
-                See full CV
-              </motion.button>
+              <div className="flex gap-4 mt-4">
+              {/* CV Button */}
+                <a
+                  href="https://drive.google.com/file/d/1BOixjARVzCO36_2W629ILvwrqt3C304M/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 text-xs rounded-xl border text-black font-semibold hover:shadow-lg hover:shadow-blu-500/50 transition-all"
+                  >
+                    See full CV
+                  </motion.button>
+                </a>
+
+                {/* LinkedIn Button */}
+                <a
+                  href="https://www.linkedin.com/in/daniele-la-ciura/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 text-xs flex rounded-xl border text-black font-semibold hover:shadow-lg gap-4 hover:shadow-blu-500/50 transition-all"
+                  >
+                    <FaLinkedin size={16} /> LinkedIn
+                  </motion.button>
+                </a>
+              </div>
             </div>
 
             <div className="text-left">

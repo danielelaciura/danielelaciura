@@ -18,7 +18,6 @@ export default function What() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="container mx-auto max-w-6xl"
       >
@@ -49,9 +48,11 @@ export default function What() {
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ y: -5, scale: 1.02 }}
+                
                 className="p-6 rounded-2xl bg-white border border-white/10 backdrop-blur-sm"
               >
                 <span className="text-3xl mb-4 text-white bg-gradient-to-br to-[#ff4a00] from-[#2962b2] rounded-xl w-auto px-2">{service.icon}
@@ -61,7 +62,7 @@ export default function What() {
                 <h3 className="text-xl text-black my-2">{service.title}</h3>
                 <p className="text-black/60 text-sm">{service.description}</p>
                 {
-                  service.tags.map((tag, index) => (<span className="inline-flex items-center gap-x-1 py-1 px-3 mr-2 mt-2 rounded-2xl text-xs font-medium bg-[#f7f7f7] text-surface-foreground">{tag}</span>))
+                  service.tags.map((tag) => (<span className="inline-flex items-center gap-x-1 py-1 px-3 mr-2 mt-2 rounded-2xl text-xs font-medium bg-[#f7f7f7] text-surface-foreground">{tag}</span>))
                 }
 
               </motion.div>

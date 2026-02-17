@@ -17,16 +17,18 @@ export default function CallToAction() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Have a dream project?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto  text-white">
+          <p className="text-lg mb-8 max-w-2xl mx-auto  text-white">
             Let&apos;s transform your vision into stunning reality. Reach out to us today and start the journey to a remarkable online presence.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-full  text-black bg-white font-semibold text-lg hover:shadow-lg hover:shadow-orange-500/50 transition-all"
-          >
-            Get In Touch
-          </motion.button>
+          <a href="mailto:hello@danielelaciura.com">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 rounded-full text-black bg-white font-semibold text-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all"
+            >
+              Get In Touch
+            </motion.button>
+          </a>
         </motion.div>
       </div>
     </section>
