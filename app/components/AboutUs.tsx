@@ -34,7 +34,8 @@ export default function AboutUs() {
 
               <p className="text-sm mb-4 leading-[1.8]">
                 I’m a qualified Product Leader with more than 15 years of experience in the tech field and travel industry.{" "}
-                <br />
+              </p>
+              <p className="text-sm mb-4 leading-[1.8]">
                 I kicked off my career working as a developer for almost 10 years, gaining a solid technical fluency and a clear understanding of the product development life cycle.
               </p>
               <p className="text-sm mb-4 leading-[1.8]">
