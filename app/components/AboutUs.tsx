@@ -32,15 +32,15 @@ export default function AboutUs() {
             <div className="text-left">
               <h3 className="mb-2">Here is a bit about me</h3>
 
-              <p className="text-md mb-4 leading-[1.8]">
+              <p className="text-sm mb-4 leading-[1.8]">
                 I’m a qualified Product Leader with more than 15 years of experience in the tech field and travel industry.{" "}
                 <br />
                 I kicked off my career working as a developer for almost 10 years, gaining a solid technical fluency and a clear understanding of the product development life cycle.
               </p>
-              <p className="text-md mb-4 leading-[1.8]">
+              <p className="text-sm mb-4 leading-[1.8]">
                 Beyond my technological background, I have developed significant expertise in the travel industry, collaborating with international suppliers and clients and leading a team of over 40 people.
               </p>
-              <p className="text-md mb-4 leading-[1.8]">
+              <p className="text-sm mb-4 leading-[1.8]">
                 I’m able to bring a blend of technical expertise, user-focused design, and strategic product management. I enjoy collaborating with teams to achieve shared goals with curiosity and adaptability.
               </p>
 

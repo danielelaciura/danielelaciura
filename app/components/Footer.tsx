@@ -18,7 +18,7 @@ export default function Footer() {
             All rights reserved ©2026
           </p>
 
-          <a href="mailto:hello@danielelaciura.com">
+          <a href="mailto:hello@danielelaciura.com" className="text-sm text-bold">
              hello@danielelaciura.com
           </a>
 
