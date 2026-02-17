@@ -17,6 +17,11 @@ export default function Footer() {
           <p className="text-black/60 text-sm">
             All rights reserved ©2026
           </p>
+
+          <a href="mailto:hello@danielelaciura.com">
+             hello@danielelaciura.com
+          </a>
+
         </motion.div>
       </div>
     </footer>

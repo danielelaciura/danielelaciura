@@ -4,16 +4,19 @@ import { motion } from "framer-motion";
 
 const aboutCards = [
   {
+    icon:"⟡",
     title: "My Mission",
     description: "I craft digital experiences that align with your brand and goals, blending creativity with functionality.",
   },
   {
+    icon:"⟡",
     title: "My Vision",
-    description: "Committed to creating digital solutions that enhance user interaction and increase conversion",
+    description: "Committed to creating digital solutions that enhance user interaction and increase conversion.",
   },
   {
+    icon:"⟡",
     title: "My Focus",
-    description: "Is centered to meet your specific needs, driving success",
+    description: "Is centered to meet your specific needs, driving success to thrive your business.",
   },
 ];
 
@@ -29,7 +32,7 @@ export default function WhatMakesDifferent() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+          <h2 className="text-4xl mt-10 md:text-5xl font-bold text-black mb-6">
             What makes me different?
           </h2>
  
@@ -46,9 +49,9 @@ export default function WhatMakesDifferent() {
               whileHover={{ y: -5, scale: 1.02 }}
               className="p-6 rounded-2xl  p-1 border border-white/10 backdrop-blur-sm"
             >
-              <div className="text-3xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold text-black mb-3">{card.title}</h3>
-              <p className="text-black/70 leading-relaxed">{card.description}</p>
+                <span className="text-3xl mb-4 text-white bg-[#ff4a00] rounded-xl w-auto px-2">{ card.icon }</span>
+                <h3 className="text-xl mt-4 font-semibold text-black mb-3">{card.title}</h3>
+              <p className="text-black leading-relaxed">{card.description}</p>
             </motion.div>
           ))}
         </div>
