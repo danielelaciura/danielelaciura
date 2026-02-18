@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
-import { supabase } from "../utils/client";
+import { getSupabase } from "../utils/client";
 
 type FormState = {
   first_name: string;
@@ -42,7 +42,7 @@ export default function CallToAction() {
     e.preventDefault();
     setStatus("loading");
 
-    const { error } = await supabase.from("contacts").insert([
+    const { error } = await getSupabase().from("contacts").insert([
       {
         first_name: form.first_name,
         last_name: form.last_name,
