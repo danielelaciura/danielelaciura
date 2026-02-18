@@ -61,7 +61,7 @@ export default function What() {
                 <h3 className="text-xl text-black my-2">{service.title}</h3>
                 <p className="text-black/60 text-sm">{service.description}</p>
                 {
-                  service.tags.map((tag, index) => (<span className="inline-flex items-center gap-x-1 py-1 px-3 mr-2 mt-2 rounded-2xl text-xs font-medium bg-[#f7f7f7] text-surface-foreground">{tag}</span>))
+                  service.tags.map((tag, index) => (<div className="inline-flex items-center gap-x-1 py-1 px-3 mr-2 mt-2 rounded-2xl text-xs font-medium bg-[#f7f7f7] text-surface-foreground">{tag}</div>))
                 }
 
               </motion.div>
